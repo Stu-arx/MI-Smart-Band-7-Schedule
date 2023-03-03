@@ -7,7 +7,7 @@ Page({
 
 		// 获取当前时间
 		const time = hmSensor.createSensor(hmSensor.id.TIME);
-		let startWeek = 1676822400000;
+		let startWeek = Number(utils.scheduleData.setting.startSemester);
 		let week = parseInt((time.utc - startWeek) / (1000 * 60 * 60 * 24 * 7) + 1);
 		let nowDate = [time.hour, time.minute];
 
